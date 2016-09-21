@@ -1,0 +1,105 @@
+﻿@model IEnumerable<NutriVaSe.Models.Antropometrico>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Paciente.Nombre)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PesoActual)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Talla)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CircuCintura)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CircuCadera)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PeriCuello)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CircuCarpo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PeriBicep)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PliegueTri)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PliegueBi)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PliegueSupra)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PliegueSube)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Fecha)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Paciente.Nombre)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PesoActual)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Talla)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CircuCintura)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CircuCadera)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PeriCuello)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CircuCarpo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PeriBicep)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PliegueTri)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PliegueBi)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PliegueSupra)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PliegueSube)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Fecha)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.Id }) |
+            @Html.ActionLink("Details", "Details", new { id=item.Id }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.Id })
+        </td>
+    </tr>
+}
+
+</table>

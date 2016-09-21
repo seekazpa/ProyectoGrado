@@ -1,0 +1,128 @@
+﻿@model NutriVaSe.Models.Antropometrico
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Antropometrico</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Paciente.Nombre)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Paciente.Nombre)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PesoActual)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PesoActual)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Talla)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Talla)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CircuCintura)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CircuCintura)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CircuCadera)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CircuCadera)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PeriCuello)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PeriCuello)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CircuCarpo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CircuCarpo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PeriBicep)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PeriBicep)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PliegueTri)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PliegueTri)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PliegueBi)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PliegueBi)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PliegueSupra)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PliegueSupra)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PliegueSube)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PliegueSube)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Fecha)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Fecha)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

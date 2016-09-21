@@ -1,4 +1,11 @@
-﻿<!DOCTYPE html>
+﻿@{
+    if (!Request.IsAuthenticated)
+    {
+        Response.Redirect("http://localhost:4270/Account/Login");
+    }
+}
+
+<!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8" />
@@ -21,6 +28,7 @@
                 </button>
                 @Html.ActionLink("NutriVaSe", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
             </div>
+            @Html.Partial("_LoginPartial")
 
             <div class="navbar-default sidebar" role="navigation">
                 <div class="sidebar-nav navbar-collapse">
@@ -41,6 +49,12 @@
                                 <i class="fa fa-dashboard fa-fw"></i> Admin
                             </a>
                         </li>
+                        @*@{
+                            if (Request.IsAuthenticated)
+                            {
+                                Html.RenderAction("MenuLista", "Menus");
+                            }
+                        }*@
                     </ul>
                 </div>
                 <!-- /.sidebar-collapse -->

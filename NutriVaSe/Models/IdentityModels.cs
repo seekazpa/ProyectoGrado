@@ -37,5 +37,11 @@ namespace NutriVaSe.Models
         {
             return new ApplicationDbContext();
         }
+
+        public System.Data.Entity.DbSet<NutriVaSe.Models.Menu> Menus { get; set; }
+
+        public System.Data.Entity.DbSet<NutriVaSe.Models.Paciente> Pacientes { get; set; }
+
+        public System.Data.Entity.DbSet<NutriVaSe.Models.Antropometrico> Antropometricoes { get; set; }
     }
 }
